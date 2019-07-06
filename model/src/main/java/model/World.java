@@ -2,6 +2,9 @@ package model;
 
 import java.util.Objects;
 
+/**
+ * World
+ */
 public class World {
 
   private final String name;
