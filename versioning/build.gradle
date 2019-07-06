@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+    id "application"
+}
+
+group 'com.foldik'
+version '0.1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+run {
+    mainClassName = 'com.foldik.versioning.Main'
+}

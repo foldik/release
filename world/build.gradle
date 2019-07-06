@@ -1,0 +1,28 @@
+plugins {
+  id "java"
+  id "application"
+  id "maven-publish"
+  id "com.github.johnrengelman.shadow" version "5.0.0"
+}
+
+version = "$projectVersion"
+group = "com.foldik"
+mainClassName = "world.App"
+
+repositories {
+  mavenLocal()
+  jcenter()
+}
+
+dependencies {
+  compile "com.foldik:model:$modelVersion"
+  testImplementation "junit:junit:4.12"
+}
+
+publishing {
+  publications {
+    jarModule(MavenPublication) {
+      from components.java
+    }
+  }
+}

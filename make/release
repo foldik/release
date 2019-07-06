@@ -1,0 +1,22 @@
+#!/bin/bash
+
+SCRIPT_PATH=$(dirname "$0")
+
+cd "$SCRIPT_PATH/.."
+
+export ROOT_DIR="$PWD"
+export BRANCH=$(git rev-parse --abbrev-ref HEAD)
+export SOURCE_VERSION="$1"
+export TARGET_VERSION="HEAD"
+export CHANGE_SET=$(git diff --name-only $TARGET_VERSION $SOURCE_VERSION)
+export GIT_TAG="$2"
+
+cd ./versioning
+
+./gradlew run
+
+cd ..
+
+git add .
+git commit -m "$2"
+git tag -a "$2" -m "$2"

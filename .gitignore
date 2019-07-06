@@ -1,0 +1,15 @@
+target/
+build/
+out/
+bin/
+tmp/
+.idea/
+settings/
+.gradle/
+make/.cache
+
+*.iml
+settings
+.classpath
+.project
+*.orig
