@@ -1,3 +1,14 @@
+# v0.1.2
+
+## Updated components
+
+- world => 0.0.3
+
+## Overall component stack
+
+- model => 0.0.2
+- world => 0.0.3
+
 # v.0.1.1
 
 ## Updated components
